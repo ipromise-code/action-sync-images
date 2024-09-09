@@ -6,11 +6,11 @@ on:
       IMAGE_NAME:
         description: '原镜像名称:版本'
         required: true
-        default: '原镜像名称:版本'
+        default: 'mysql:5.6'
       NEW_NAME:
         description: '同步后镜像名称:版本'
         required: true
-        default: '同步后镜像名称:版本'
+        default: 'mysql:5.6'
       TARGET_REGISTRY:
         description: '仓库地址'
         required: true
@@ -22,7 +22,7 @@ on:
       TARGET_DOCKRE_REGISTRY:
         description: '镜像仓库'
         required: true
-        default: '镜像仓库'
+        default: 'mysql:5.6'
       ARCH:
         description: '系统架构'
         required: true
@@ -43,7 +43,7 @@ jobs:
     steps:
       - name: 登录到 Docker 仓库
         id: login
-        run: docker login -u 阿里云账号名字 -p 账号密码${{ github.event.inputs.TARGET_REGISTRY }}
+        run: docker login -u aliyun9334348715 -p yh110120119${{ github.event.inputs.TARGET_REGISTRY }}
         continue-on-error: true
 
       - name: 检查 Docker 登录成功
