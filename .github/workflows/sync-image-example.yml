@@ -6,11 +6,11 @@ on:
       IMAGE_NAME:
         description: '原镜像名称:版本'
         required: true
-        default: 'wordpress:4.8-apache'
+        default: 'gitlab-ce:12.9.2-ce.0'
       NEW_NAME:
         description: '同步后镜像名称:版本'
         required: true
-        default: 'wordpress:4.8-apache'
+        default: 'gitlab-ce:12.9.2-ce.0'
       TARGET_REGISTRY:
         description: '仓库地址'
         required: true
@@ -22,7 +22,7 @@ on:
       TARGET_DOCKRE_REGISTRY:
         description: '镜像仓库'
         required: true
-        default: 'wordpress:4.8-apache'
+        default: 'gitlab-ce:12.9.2-ce.0'
       ARCH:
         description: '系统架构'
         required: true
